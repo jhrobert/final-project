@@ -1,0 +1,27 @@
+.right {
+    float: right;
+}
+
+table, th, td {
+    border: 2px solid darkslategray;
+    border-collapse: collapse;
+    padding: .85em;
+}
+.footer {
+    font-family: serif;
+    font-weight: 200;
+    color: darkgrey;
+    font-size: 2em;
+}
+
+#foot{
+    border: 2px solid darkslategrey;
+    padding: 0.5em;
+    text-align: center;
+}   
+#contact {
+    text-align: center;
+    font-style: oblique;  
+}
+
+
