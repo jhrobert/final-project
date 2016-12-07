@@ -360,9 +360,8 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {
                         >
                 </label>
             </fieldset> <!-- closes derivative -->
-
-            <fieldset class="buttons">
-                <legend></legend>   
+            <br>
+            <fieldset class="buttons">   
                 <input class="button" id="btnSubmit" name="btnSubmit" tabindex="900" type="submit" value="Register">       
             </fieldset>   <!-- closing tag for button -->                  
         </form>    <!--ends entire form --> 
