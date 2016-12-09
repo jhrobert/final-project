@@ -1,5 +1,4 @@
 <?php
-include "header.php";
 include "top.php";
 
 
@@ -102,6 +101,8 @@ if ($debug)
 
     <p class="paragraph">To recap, PHP: Hypertext Preprocessor is an extremely useful web design and programming tool that is highly underrated and should be used more often! Don’t forget to sign up for the Daily Attribute…</p>
 
+</article>
+    
 <?php include "footer.php"; ?>    
 
 </body>

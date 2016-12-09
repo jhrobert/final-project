@@ -1,7 +1,8 @@
 <?php
-include "header.php";
 include "top.php";
 ?>
+
+
 
 <?php
 //ok so we need to display whatever element the user wanted
@@ -48,6 +49,64 @@ if ($elementChoice == "footer") {
     print "<footer>This is a footer. I don't have any puns for it unlike header, sorry.</footer>";
 }
 ?>
+
+<?php
+$element = "paragraph";
+?>
+
+
+<form action = "<?php print $phpSelf; ?>" method = "get" id = "frmHTML">
+    <fieldset class = "listbox <?php if ($htmlERROR) print ' mistake' ?>">
+        <label for = "lstHTML">HTML Element to display?</label>
+        <select id = "lstHTML"
+                name = "lstHTML"
+                tabindex = "120">
+            <option <?php if ($element == "paragraph") print " selected "; ?>
+                value="paragraph">&#60;p&#62;</option>
+
+            <option <?php if ($element == "head1") print " selected "; ?>
+                value="head1">&#60;h1&#62;</option>
+
+            <option <?php if ($element == "head2") print " selected "; ?>
+                value="head2">&#60;h2&#62;</option>
+            
+            <option <?php if ($element == "head3") print " selected "; ?>
+                value="head3">&#60;h3&#62;</option>
+            
+            <option <?php if ($element == "figure") print " selected "; ?>
+                value="figure">&#60;figure&#62;</option>
+            
+            <option <?php if ($element == "aside") print " selected "; ?>
+                value="aside">&#60;aside&#62;</option>
+            
+            <option <?php if ($element == "article") print " selected "; ?>
+                value="article">&#60;article&#62;</option>
+            
+            <option <?php if ($element == "header") print " selected "; ?>
+                value="header">&#60;header&#62;</option>
+            
+            <option <?php if ($element == "footer") print " selected "; ?>
+                value="footer">&#60;footer&#62;</option>
+        </select>
+    </fieldset>
+    <fieldset class="buttons">
+            <legend></legend>
+            <input type="submit" id="btnSubmit" name="btn" value="submit" tabindex="900" class="button" >
+        </fieldset>
+
+</form>
+
+
+<?php 
+$submitted = htmlentities($_GET["btn"], ENT_QUOTES, "UTF-8");
+$element = htmlentities($_GET["lstHTML"], ENT_QUOTES, "UTF-8");
+if ($submitted == "submit"){
+    print "<a href='html.php?elm=". $element . "'>Check it out!</a>";
+}
+?>
+
+<?php include "footer.php"; ?> 
 </body>
 </html>
+
 

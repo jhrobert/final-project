@@ -47,7 +47,7 @@ if (isset($_POST["btnSubmit"])) {
     $firstName = htmlentities($_POST["txtFirstName"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $firstName;
 
-    $middleName = htmlentities($_POST["txtLastName"], ENT_QUOTES, "UTF-8");
+    $middleName = htmlentities($_POST["txtMiddleName"], ENT_QUOTES, "UTF-8");
     $dataRecord[] = $middleName;
 
     $email = filter_var($_POST["txtEmail"], FILTER_SANITIZE_EMAIL);
@@ -78,7 +78,7 @@ if (isset($_POST["btnSubmit"])) {
     if ($middleName == "") {
         $errorMsg[] = "Please enter your middle name";
         $middleNameERROR = true;
-    } elseif (!verifyAlphaNum($lastName)) {
+    } elseif (!verifyAlphaNum($middleName)) {
         $errorMsg[] = "Your middle name has an extra chartacter.";
         $middleNameERROR = true;
     }
@@ -134,9 +134,10 @@ if (isset($_POST["btnSubmit"])) {
             print "<p>Form is valid</p>";
 
         // save data 
+        $filelocation = "data/";
         $fileExt = ".csv";
-        $myFileName = "data/registrationforform";
-        $fileName = $myfilename . $fileExt;
+        $myFileName = "registrationforform";
+        $filename = $filelocation . $myFileName . $fileExt;
 
         if ($debug) {
             print "\n\n<p>filename is" . $filename;
@@ -175,7 +176,7 @@ if (isset($_POST["btnSubmit"])) {
         $cc = "";
         $bcc = "";
 
-        $from = "Save The Ceramic Coffee Mugs <noreply@savetheceramiccoffeemugs.com>";
+        $from = "Daily Attribute <noreply@dailyattribute.com>";
 
 //subject related to site content
         $todaysDate = strftime("%x");
@@ -195,15 +196,15 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {
 
     print "<p>For your records a copy of this data has ";
 
-    if (!$mailed) {
-        print "not";
-    }
+if (!$mailed) {
+    print "not";
+}
     print "has been sent:</p>";
     print "<p>To: " . $email . "</p>";
 
     print $message;
 } else {
-
+    
     print "<h2>Register</h2>";
     print "<p>Please Enter Your Email To Receive A Daily Attribute</p>";
 
@@ -367,7 +368,7 @@ if (isset($_POST["btnSubmit"]) AND empty($errorMsg)) {
         </form>    <!--ends entire form --> 
 
     <?php } // ends form submit 
-?> 
+?>      
 
 </article>
 

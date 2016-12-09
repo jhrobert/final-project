@@ -1,37 +1,12 @@
 <?php
-include "header.php";
 include "top.php";
 ?>
 
-<style>
-    table, th, td{
-    margin: auto;
-    border-collapse: collapse;
-    border: none;
-    padding: 1em;
-    text-align: center;
-}
-th{
-    font-weight: lighter;
-    color: darkslateblue;
-    font-size: 2em;
-    padding: 1em;
-}
-
-td{
-   font-weight: lighter;
-    color: lightslategray;
-    font-size: 1em;
-    width: 50%;
-}
-
-</style>
-
 <article>
     <h2 id="contact">Meet Our Crew</h2>
-    
+   
     <table>
-        <tr> 
+        <tr id="ourInfo"> 
             <th>Jack Robert</th>
             <th>Josh Rothenberg</th>
         </tr>    
@@ -48,11 +23,11 @@ td{
             <td>Josh, Class of 2019, is a Computer Science Major at UVM. Josh enjoys a relaxed lifestyle, all of life's philosophical questions, and smooth peanut butter. Josh is a native of Pennsylvania and has embraced the features of Vermont, favors the color blue, and his favorite starch is bread. Josh is currently intrigued with learning all he can about computer science while at UVM and is very excited to receive his daily attribute to further his knowledge of code. Josh also has a strong interest in genetics and biological concepts. He also has not made it clear which Linkin Park song is his favorite.</td>
         </tr>
     </table>
-    
+ 
    
     
     <figure id="aside">
-        <img src="images/meandjack.jpg" alt=""</img> 
+        <img src="images/meandjack.jpg" alt="">
         <figcaption id="figTxt">Jack (L) and Josh (R)</figcaption>
     </figure>
    

@@ -2,9 +2,11 @@
 body {
     background-color: whitesmoke;
     opacity: 0.95;
+    width: 990px;
+    margin: 0 auto;
 }
 
-h2, h3, h4{
+h1,h2, h3, h4{
     text-align: center;
 }
 
@@ -117,16 +119,25 @@ p{
     font-style: initial;
 }
 
-li {
+.navbar {
     list-style: none;
     display: inline-block;
-    padding: 3em;
-    margin: auto;
+    padding: 2em;
     overflow: hidden;
     border: thin solid;
     text-align: center;
+    font-weight: bold;
     width: 8%;
     background-color: honeydew;
+}
+
+a{
+    text-decoration: none;
+    color: dimgray;
+}
+
+a:hover{
+    background-color: lightgrey;
 }
 
 #contact {
@@ -146,3 +157,21 @@ li {
     text-align: center;
     background-color: honeydew;
 }   
+
+div li{
+    color: crimson;
+    border: none;
+    list-style-type: lower-roman;
+}
+
+#ourInfo{
+    margin: auto;
+    border-collapse: collapse;
+    border: none;
+    padding: 1em;
+    text-align: center;
+    font-weight: lighter;
+    color: darkslateblue;
+    font-size: 1.95em;
+    width: 50%;
+}

@@ -1,7 +1,7 @@
 <nav>
     <ol>
         <?php
-        print '<li class="';
+        print '<li class="navbar';
         if ($path_parts['filename'] == "index") {
             print ' activePage ';
         }
@@ -9,26 +9,26 @@
         print '<a href="index.php">Home</a>';
         print '</li>';
 
-        print '<li class="';
+        print '<li class="navbar';
         if ($path_parts['filename'] == "html") {
             print ' activePage ';
         }
 
         print '">';
-        print '<a href="html.php">HTML Page</a>';
+        print '<a href="html.php">HTML</a>';
         print '</li>';
 
 
-        print '<li class="';
+        print '<li class="navbar';
         if ($path_parts['filename'] == "css") {
             print ' activePage ';
         }
         print '">';
-        print '<a href="css.php">CSS Page</a>';
+        print '<a href="css.php">CSS</a>';
         print '</li>';
 
 
-        print '<li class="';
+        print '<li class="navbar';
         if ($path_parts['filename'] == "php") {
             print ' activePage ';
         }
@@ -37,7 +37,7 @@
         print '<a href="php.php">PHP Facts</a>';
         print '</li>';
 
-        print '<li class="';
+        print '<li class="navbar';
         if ($path_parts['filename'] == "form") {
             print ' activePage ';
         }
@@ -46,13 +46,13 @@
         print '<a href="form.php">Sign Up</a>';
         print '</li>';
 
-        print '<li class="';
+        print '<li class="navbar';
         if ($path_parts['filename'] == "contact") {
             print ' activePage ';
         }
 
         print '">';
-        print '<a href="contact.php">Contact Us</a>';
+        print '<a href="contact.php">Contact</a>';
         print '</li>';
         ?>
     </ol>
